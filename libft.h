@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 14:47:05 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/09/22 20:52:53 by xmatute-         ###   ########.fr       */
+/*   Updated: 2024/08/27 21:08:48 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include	<stddef.h>
 # include	<stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
 // # include <stdio.h>
 // # include <fcntl.h>
 // # include <sys/stat.h>

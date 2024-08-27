@@ -6,7 +6,7 @@
 #    By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/23 16:17:58 by xmatute-          #+#    #+#              #
-#    Updated: 2024/08/27 20:49:43 by xmatute-         ###   ########.fr        #
+#    Updated: 2024/08/27 21:10:53 by xmatute-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,8 @@ SRC_MEM = ft_memchr.c ft_memset.c ft_memcmp.c ft_memcpy.c ft_memmove.c \
 
 SRC_TO = ft_toupper.c ft_tolower.c
 
-SRC_PUT = ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+SRC_PUT = ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
+	  ft_putvar.c
 
 SRC_STOS = ft_atoi.c ft_itoa.c
 
