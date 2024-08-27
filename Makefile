@@ -6,7 +6,7 @@
 #    By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/23 16:17:58 by xmatute-          #+#    #+#              #
-#    Updated: 2024/08/27 20:38:19 by xmatute-         ###   ########.fr        #
+#    Updated: 2024/08/27 20:49:43 by xmatute-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,8 +39,10 @@ SRC_LST =	ft_lstnew_bonus.c         \
 		ft_lstiter_bonus.c        \
 		ft_lstmap_bonus.c
 
+SRC_PRINTF =	ft_printf.c
+
 SRC = $(SRC_IS) $(SRC_STR) $(SRC_MEM) $(SRC_TO) $(SRC_PUT) $(SRC_STOS) \
-      $(SRC_LST)
+      $(SRC_LST) $(SRC_PRINTF)
 		
 OBJS = $(SRC:%.c=%.o)
 
