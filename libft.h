@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 14:47:05 by xmatute-          #+#    #+#             */
-/*   Updated: 2024/08/27 21:08:48 by xmatute-         ###   ########.fr       */
+/*   Updated: 2024/09/17 21:43:04 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,28 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include	<stddef.h>
-# include	<stdlib.h>
+# include <stddef.h>
+# include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
+
+// for testing replicated functions
 // # include <stdio.h>
 // # include <fcntl.h>
 // # include <sys/stat.h>
 // # include <stdlib.h>
 // # include <sys/types.h>
+
+// IS
+int			ft_isalpha(int c);
+int			ft_isdigit(int arg);
+int			ft_isalnum(int argument);
+int			ft_isascii(int a);
+int			ft_isprint(int a);
+
+// PUT
+
+#include "ft_put.h"
 
 typedef struct s_list
 {
@@ -30,11 +43,6 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-int			ft_isalpha(int c);
-int			ft_isdigit(int arg);
-int			ft_isalnum(int argument);
-int			ft_isascii(int a);
-int			ft_isprint(int a);
 size_t		ft_strlen(const char *s);
 void		*ft_memset(void *str, int c, size_t n);
 void		ft_bzero(void *s, size_t n);
@@ -60,10 +68,7 @@ char		*ft_strtrim(char const *s1, char const *set);
 char		**ft_split(char const *s, char c);
 char		*ft_itoa(int n);
 void		ft_striteri(char *s, void (*f)(unsigned int, char*));
-void		ft_putchar_fd(char c, int fd);
-void		ft_putstr_fd(char *s, int fd);
-void		ft_putendl_fd(char *s, int fd);
-void		ft_putnbr_fd(int n, int fd);
+
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list		*ft_lstnew(void *content);
@@ -74,5 +79,9 @@ void		ft_lstadd_back(t_list **lst, t_list *new);
 void		ft_lstdelone(t_list *lst, void (*del)(void *));
 void		ft_lstclear(t_list **lst, void (*del)(void *));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
+
+// PRINTF
+
+#include "ft_printf.h"
 
 #endif

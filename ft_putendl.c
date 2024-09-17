@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 11:24:46 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/09/21 18:33:28 by xmatute-         ###   ########.fr       */
+/*   Created: 2022/09/21 11:21:02 by xmatute-          #+#    #+#             */
+/*   Updated: 2024/09/01 20:46:59 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_putposnbr_fd(unsigned int n, int fd)
+int	ft_putendl_fd(char *s, int fd)
 {
-	if (n / 10 == 0)
-		ft_putchar_fd('0' + n, fd);
-	else
-	{
-		ft_putposnbr_fd(n / 10, fd);
-		ft_putposnbr_fd(n % 10, fd);
-	}
+	return (
+	ft_putstr_fd(s, fd) +
+	ft_putchar_fd('\n', fd));
 }
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_putendl_err(char *s)
 {
-	if (n == 0)
-		ft_putchar_fd('0', fd);
-	else if (n < 0)
-	{
-		ft_putchar_fd('-', fd);
-		ft_putposnbr_fd(-1 * n, fd);
-	}
-	else
-		ft_putposnbr_fd(n, fd);
+	return (
+	ft_putstr_err(s) +
+	ft_putchar_err('\n'));
+}
+
+int	ft_putendl(char *s)
+{
+	return (
+	ft_putstr(s) +
+	ft_putchar('\n'));
 }

@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 17:08:21 by xmatute-          #+#    #+#             */
-/*   Updated: 2024/09/17 21:50:47 by xmatute-         ###   ########.fr       */
+/*   Created: 2024/09/17 21:43:39 by xmatute-          #+#    #+#             */
+/*   Updated: 2024/09/17 21:44:21 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-char	*ft_strnstr(const char	*big, const char *little, size_t len)
-{
-	size_t	i;
-	size_t	j;
+int ft_printf(const char *format, ...);
 
-	if (!*little)
-		return ((char *)big);
-	i = 0;
-	j = 0;
-	while (big[i] && i < len && little[j])
-	{
-		j = 0;
-		while ((big[i + j] == little[j]) && little[j] && i + j < len)
-			j++;
-		if (!little[j])
-			return ((char *)(big + i));
-		i++;
-	}
-	return (0);
-}
+#endif //FT_PRINTF_H

@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 17:08:21 by xmatute-          #+#    #+#             */
-/*   Updated: 2024/09/17 21:50:47 by xmatute-         ###   ########.fr       */
+/*   Created: 2024/09/17 21:45:01 by xmatute-          #+#    #+#             */
+/*   Updated: 2024/09/17 21:51:16 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char	*big, const char *little, size_t len)
+int    ft_putptr_fd(void *ptr, int fd)
 {
-	size_t	i;
-	size_t	j;
+    return (
+        ft_putstr_fd("0x", fd) +
+        ft_putunbr_base_fd((unsigned long long)ptr, "0123456789abcdef", fd));
+}
 
-	if (!*little)
-		return ((char *)big);
-	i = 0;
-	j = 0;
-	while (big[i] && i < len && little[j])
-	{
-		j = 0;
-		while ((big[i + j] == little[j]) && little[j] && i + j < len)
-			j++;
-		if (!little[j])
-			return ((char *)(big + i));
-		i++;
-	}
-	return (0);
+int    ft_putptr(void *ptr)
+{
+    return (ft_putptr_fd(ptr, 1));
+}
+
+int    ft_putptr_err(void *ptr)
+{
+    return (ft_putptr_fd(ptr, 2));
 }

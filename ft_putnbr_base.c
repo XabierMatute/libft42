@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 17:08:21 by xmatute-          #+#    #+#             */
-/*   Updated: 2024/09/17 21:50:47 by xmatute-         ###   ########.fr       */
+/*   Created: 2024/09/17 21:27:38 by xmatute-          #+#    #+#             */
+/*   Updated: 2024/09/17 21:48:50 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char	*big, const char *little, size_t len)
+int	ft_putnbr_base_fd(int n, char *base, int fd)
 {
-	size_t	i;
-	size_t	j;
+    if (n < 0)
+        return (
+            ft_putchar_fd('-', fd) +
+            ft_putunbr_base_fd(-1 * n, base, fd));
+    else
+        return (ft_putunbr_base_fd(n, base, fd));
+}
 
-	if (!*little)
-		return ((char *)big);
-	i = 0;
-	j = 0;
-	while (big[i] && i < len && little[j])
-	{
-		j = 0;
-		while ((big[i + j] == little[j]) && little[j] && i + j < len)
-			j++;
-		if (!little[j])
-			return ((char *)(big + i));
-		i++;
-	}
-	return (0);
+int	ft_putnbr_base(int n, char *base)
+{
+    return (ft_putnbr_base_fd(n, base, 1));
+}
+
+int ft_putnbr_base_err(int n, char *base)
+{
+    return (ft_putnbr_base_fd(n, base, 2));
 }
