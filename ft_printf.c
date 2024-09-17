@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xmatute- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 20:52:04 by xmatute-          #+#    #+#             */
-/*   Updated: 2024/08/27 21:09:54 by xmatute-         ###   ########.fr       */
+/*   Updated: 2024/09/17 21:57:19 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_printf(char const *s, ...)
 	while(*s)
 	{
 		if (*s == '%')	
-			printed_chars += ft_putva(va, *s);
+			printed_chars += ft_putva(va, *(++s));
 		else
 			printed_chars += ft_putchar(*s);
 		s++;

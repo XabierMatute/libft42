@@ -6,14 +6,14 @@
 #    By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/23 16:17:58 by xmatute-          #+#    #+#              #
-#    Updated: 2024/09/17 21:49:59 by xmatute-         ###   ########.fr        #
+#    Updated: 2024/09/17 22:33:53 by xmatute-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRC_IS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
-	 ft_isspace.c 
+SRC_IS =	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
+			ft_isspace.c 
 
 SRC_STR =	ft_strchr.c ft_strrchr.c ft_strncmp.c ft_strlen.c \
 			ft_strnstr.c ft_strlcpy.c ft_strlcat.c ft_strdup.c \
@@ -23,14 +23,13 @@ SRC_STR =	ft_strchr.c ft_strrchr.c ft_strncmp.c ft_strlen.c \
 SRC_MEM =	ft_memchr.c ft_memset.c ft_memcmp.c ft_memcpy.c ft_memmove.c \
 			ft_bzero.c ft_calloc.c 
 
-SRC_TO =	ft_toupper.c ft_tolower.c
+SRC_TO =	ft_toupper.c ft_tolower.c \
+			ft_atoi.c ft_itoa.c
 
 SRC_PUT =	ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c \
 			ft_putnbr_base.c ft_putunbr.c ft_putunbr_base.c \
 			ft_putptr.c \
 			ft_putva.c
-
-SRC_STOS =	ft_atoi.c ft_itoa.c
 
 SRC_LST =	ft_lstnew_bonus.c         \
 			ft_lstadd_front_bonus.c   \
@@ -44,7 +43,7 @@ SRC_LST =	ft_lstnew_bonus.c         \
 
 SRC_PRINTF =	ft_printf.c
 
-SRC = $(SRC_IS) $(SRC_STR) $(SRC_MEM) $(SRC_TO) $(SRC_PUT) $(SRC_STOS) \
+SRC = $(SRC_IS) $(SRC_STR) $(SRC_MEM) $(SRC_TO) $(SRC_PUT) \
       $(SRC_LST) $(SRC_PRINTF)
 		
 OBJS = $(SRC:%.c=%.o)
