@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 14:47:05 by xmatute-          #+#    #+#             */
-/*   Updated: 2024/09/17 22:39:18 by xmatute-         ###   ########.fr       */
+/*   Updated: 2024/10/09 18:06:32 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,10 @@
 // PRINTF
 
 #include "ft_printf.h"
+
+// SWAP
+
+#include "ft_swap.h"
+
 
 #endif
