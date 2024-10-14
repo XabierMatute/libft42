@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 15:25:26 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/09/09 21:20:52 by xmatute-         ###   ########.fr       */
+/*   Updated: 2024/10/14 15:03:54 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	int	l;
+	size_t	l;
 
 	l = 0;
 	while (s[l])
