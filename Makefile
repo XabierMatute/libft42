@@ -6,7 +6,7 @@
 #    By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/23 16:17:58 by xmatute-          #+#    #+#              #
-#    Updated: 2024/10/09 18:18:03 by xmatute-         ###   ########.fr        #
+#    Updated: 2024/10/14 15:04:50 by xmatute-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRC_STR =	ft_strchr.c ft_strrchr.c ft_strncmp.c ft_strlen.c \
 
 SRC_MEM =	ft_memchr.c ft_memset.c ft_memcmp.c ft_memcpy.c ft_memmove.c \
 			ft_bzero.c ft_calloc.c \
-			ft_free2.c
+			ft_free2.c ft_parrlen.c
 
 SRC_TO =	ft_toupper.c ft_tolower.c \
 			ft_atoi.c ft_itoa.c

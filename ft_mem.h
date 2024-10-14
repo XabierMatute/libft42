@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 22:15:00 by xmatute-          #+#    #+#             */
-/*   Updated: 2024/10/09 18:17:45 by xmatute-         ###   ########.fr       */
+/*   Updated: 2024/10/14 15:04:32 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 
 void	free2(void **pp);
+size_t  ft_parrlen(void **parr);
 
 #endif //FT_MEM_H
