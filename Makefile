@@ -6,7 +6,7 @@
 #    By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/23 16:17:58 by xmatute-          #+#    #+#              #
-#    Updated: 2024/10/14 15:04:50 by xmatute-         ###   ########.fr        #
+#    Updated: 2025/02/12 19:47:48 by xmatute-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,6 +53,8 @@ OBJS = $(SRC:%.c=%.o)
 
 CFLAGS = -Wall -Werror -Wextra
 
+SANI = -fsanitize=address -g3
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
@@ -73,4 +75,7 @@ test: all
 	gcc $(FLAGS) main.c $(NAME) -o test
 	./test
 
-.PHONY: all clean fclean re test
+sani:
+	$(MAKE) FLAGS='$(SANI)' all
+
+.PHONY: all clean fclean re test sani
